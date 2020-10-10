@@ -72,3 +72,16 @@ function writePassword() {
 // Add event listener to generate button
 
 generateBtn.addEventListener("click", writePassword);
+//generates confirm box which takes in true or false whether we want to use special characters in our password that we generate
+var confirmSpecialChar = confirm("Do you want to use special characters in your password?");
+//generates confrim box which takes in true or false whether we want to use numbers in our password
+var confrimNumbers = confirm("Do you want to use numbers numbers in your password?");
+//generates confirm box which takes in true or falase whether we want to use uppercase letters in our password
+var confirmUpperCase = confirm("Do you want to use uppercase letters in your password?");
+//generataes confirm box which takes in true or false whether we want to use lowercase letters in our password
+var confirmLowerCase = confirm("Do you want to use lowercase letters in your password?");
+
+console.log(confirmSpecialChar);
+console.log(confrimNumbers);
+console.log(confirmUpperCase);
+console.log(confirmLowerCase);
