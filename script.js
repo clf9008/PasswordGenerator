@@ -10,7 +10,7 @@
     //create functions for randomizing items, function for generating the password, function for prompting the users
 var generateBtn = document.querySelector("#generate");
 
-//Arrays
+//Creates and array of special characters to be used in our password if truthy
 var specialChars = [
     '@',
     '%',
@@ -40,13 +40,13 @@ var specialChars = [
 
 
 
-
+//Creates an array of lower case letters to be generated in our password if truthy
 var lowerCase = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k',
 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
-
+//Creates an array of upper case letters to be generated in our password if truthy 
 var upperCase = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 
 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
-
+//creates an array of numbers to be generated in our password if truthy
 var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 //randomizing function 
