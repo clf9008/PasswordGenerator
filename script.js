@@ -42,12 +42,12 @@ var specialChars = [
 
 //Creates an array of lower case letters to be generated in our password if truthy
 var lowerCase = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k',
-'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 //Creates an array of upper case letters to be generated in our password if truthy 
 var upperCase = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 
-'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 //creates an array of numbers to be generated in our password if truthy
-var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 //randomizing function 
 function gettingRandomChar(array) {
