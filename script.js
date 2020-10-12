@@ -86,16 +86,19 @@ console.log(confrimNumbers);
 console.log(confirmUpperCase);
 console.log(confirmLowerCase);
 //If-else conditional statements for boleon statement prompts
-//
+//if the boleon statement on confirmSpecialChar is truthy, run the following funtion/method
 if (confirmSpecialChar === true) {
     function (gettingRandomChar[specialChars])
 };
+//if the boleon statement on confirmNumbers is truthy, run the following function/method
 else if (confrimNumbers === true) {
     function (gettingRandomChar[numbers])
 };
+//if the boleon statement on confirmUpperCase is truthy, run the following function/method
 else if (confirmUpperCase === true) {
     funtion (gettingRandomChar[upperCase])
 };
+//if the boleon statement on confirmLowerCase is truthy, run the following function/method
 else if (confirmLowerCase === true) {
     fuction (gettingRandomChar[lowerCase])
 };
