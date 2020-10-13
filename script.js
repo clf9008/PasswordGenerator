@@ -115,38 +115,45 @@ var characterChoice = [];
 // Array to contain one of each type of chosen character to make sure each will be used
 var charactersToBeUsed = [];    
 
+//Booleon statement to confirm user wants to use special characters in the password
 if(userOptions.confirmSpecialChar === true) {
-    //function writePassword(gettingRandomChar(specialChars))
-    characterChoice=characterChoice.concat(specialChars);
+ characterChoice=characterChoice.concat(specialChars);
     charactersToBeUsed.push(gettingRandomChar(specialChars));
-}
-
+};
+console.log(characterChoice)
 //if the boleon statement on confirmNumbers is truthy, run the following function/method
- if(userOptions.confirmNumbers === true) {
+if(userOptions.confirmNumbers === true) {
     characterChoice=characterChoice.concat(numbers);
     charactersToBeUsed.push(gettingRandomChar(numbers))
 };
+console.log(charactersToBeUsed)
 //if the boleon statement on confirmUpperCase is truthy, run the following function/method
 if(userOptions.confirmUpperCase === true) {
     characterChoice=characterChoice.concat(upperCase);
     charactersToBeUsed.push(gettingRandomChar(upperCase))
 };
+console.log(userOptions)
 //if the boleon statement on confirmLowerCase is truthy, run the following function/method
 if(userOptions.confirmLowerCase === true) {
    characterChoice=characterChoice.concat(lowerCase);
    charactersToBeUsed.push(gettingRandomChar(lowerCase));
 };
+//for loop that takes the users input for password length and runs it through funtion for getting random characters
 for (let index = 0; index < userOptions.confirmStrlength; index++) {
-   var characterChoice= gettingRandomChar(characterChoice)
+   var characterChoice = gettingRandomChar(charactersToBeUsed)
    chosenPW.push(characterChoice)
 };
+//for loop that takes the charactersToBeUsed and runs it through the chosenPW function to store into global memory
 for (let index = 0; index < charactersToBeUsed.length; index++) {
    chosenPW[index]=charactersToBeUsed[index]
     
 };
 return chosenPW.join('')
-    //running loop to check if all variables are false. If so, user is prompted to select again
-   if (confirmLowerCase == false && confirmUpperCase == false && confirmNumbers== false && confirmSpecialChar == false) {
+   
+
+
+//running loop to check if all variables are false. If so, user is prompted to select again
+     if (confirmLowerCase == false && confirmUpperCase == false && confirmNumbers== false && confirmSpecialChar == false) {
         alert("Please select one type of character");
         confirmLowerCase=confirm("Do you want to include lowercase characters?");
         confirmUpperCase=confirm("Do you want to include uppercase characters?");
