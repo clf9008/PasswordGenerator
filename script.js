@@ -49,7 +49,7 @@ var upperCase = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K',
 //creates an array of numbers to be generated in our password if truthy
 var numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 //creates a variable to put into global memory of the total number of characters of the password which can be between 8 and 128
-//var charTotal = [0 to 128]!!
+
 
 
 //randomizing function 
@@ -73,8 +73,8 @@ function usersPWOptions() {
 
 //generates confirm box which takes in true or false whether we want to use special characters in our password that we generate
 var confirmSpecialChar = confirm("Do you want to use special characters in your password?");
-//generates confrim box which takes in true or false whether we want to use numbers in our password
-var confrimNumbers = confirm("Do you want to use numbers numbers in your password?");
+//generates confirm box which takes in true or false whether we want to use numbers in our password
+var confirmNumbers = confirm("Do you want to use numbers numbers in your password?");
 //generates confirm box which takes in true or falase whether we want to use uppercase letters in our password
 var confirmUpperCase = confirm("Do you want to use uppercase letters in your password?");
 //generataes confirm box which takes in true or false whether we want to use lowercase letters in our password
@@ -82,14 +82,14 @@ var confirmLowerCase = confirm("Do you want to use lowercase letters in your pas
 //genereates a prompt box which ask the user how many charachters long they would like the password
 var confirmStrlength = prompt("Enter a password length of 8 to 128?")
 console.log(confirmSpecialChar);
-console.log(confrimNumbers);
+console.log(confirmNumbers);
 console.log(confirmUpperCase);
 console.log(confirmLowerCase);
 //obj to store users choices
 var userInput ={
     confirmStrlength: confirmStrlength, 
     confirmSpecialChar: confirmSpecialChar,
-    confrimNumbers: confrimNumbers,
+    confirmNumbers: confirmNumbers,
     confirmUpperCase: confirmUpperCase,
     confirmLowerCase: confirmLowerCase,
 
@@ -122,7 +122,7 @@ if(userOptions.confirmSpecialChar === true) {
 }
 
 //if the boleon statement on confirmNumbers is truthy, run the following function/method
- if(userOptions.confrimNumbers === true) {
+ if(userOptions.confirmNumbers === true) {
     characterChoice=characterChoice.concat(numbers);
     charactersToBeUsed.push(gettingRandomChar(numbers))
 };
@@ -139,18 +139,18 @@ if(userOptions.confirmLowerCase === true) {
 for (let index = 0; index < userOptions.confirmStrlength; index++) {
    var characterChoice= gettingRandomChar(characterChoice)
    chosenPW.push(characterChoice)
-}
+};
 for (let index = 0; index < charactersToBeUsed.length; index++) {
    chosenPW[index]=charactersToBeUsed[index]
     
-}
+};
 return chosenPW.join('')
     //running loop to check if all variables are false. If so, user is prompted to select again
-   if (confirmLowerCase == false && confirmUpperCase == false && confrimNumbers== false && confirmSpecialChar == false) {
+   if (confirmLowerCase == false && confirmUpperCase == false && confirmNumbers== false && confirmSpecialChar == false) {
         alert("Please select one type of character");
         confirmLowerCase=confirm("Do you want to include lowercase characters?");
         confirmUpperCase=confirm("Do you want to include uppercase characters?");
-        confrimNumbers=confirm("Do you want to include numeric characters?");
+        confirmNumbers=confirm("Do you want to include numeric characters?");
         confirmSpecialChar=confirm("Do you want to include special characters?");
     }
 }
