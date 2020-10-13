@@ -48,6 +48,9 @@ var upperCase = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K',
 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 //creates an array of numbers to be generated in our password if truthy
 var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+//creates a variable to put into global memory of the total number of characters of the password which can be between 8 and 128
+var charTotal = [0 to 128]!!
+
 
 //randomizing function 
 function gettingRandomChar(array) {
@@ -57,7 +60,7 @@ function gettingRandomChar(array) {
 
     return ramdomChar;
     
-}
+};
 
 // Write password to the #password input
 
@@ -67,7 +70,7 @@ function writePassword() {
 
     passwordText.value = password;
 
-}
+};
 
 // Add event listener to generate button
 
@@ -80,25 +83,35 @@ var confrimNumbers = confirm("Do you want to use numbers numbers in your passwor
 var confirmUpperCase = confirm("Do you want to use uppercase letters in your password?");
 //generataes confirm box which takes in true or false whether we want to use lowercase letters in our password
 var confirmLowerCase = confirm("Do you want to use lowercase letters in your password?");
-
+//genereates a prompt box which ask the user how many charachters long they would like the password
+var confirmStrlength = prompt("How long would you like the password to be?")
 console.log(confirmSpecialChar);
 console.log(confrimNumbers);
 console.log(confirmUpperCase);
 console.log(confirmLowerCase);
 //If-else conditional statements for boleon statement prompts
 //if the boleon statement on confirmSpecialChar is truthy, run the following funtion/method
-if (confirmSpecialChar === true) {
-    function (gettingRandomChar[specialChars])
-};
+if(confirmSpecialChar === true) {
+    function gettingRandomChar(specialChars)
+}
 //if the boleon statement on confirmNumbers is truthy, run the following function/method
-else if (confrimNumbers === true) {
-    function (gettingRandomChar[numbers])
+else if(confrimNumbers === true) {
+    function gettingRandom(numbers)
 };
 //if the boleon statement on confirmUpperCase is truthy, run the following function/method
-else if (confirmUpperCase === true) {
-    funtion (gettingRandomChar[upperCase])
+else if(confirmUpperCase === true) {
+    function gettingRandomChar(upperCase)
 };
 //if the boleon statement on confirmLowerCase is truthy, run the following function/method
-else if (confirmLowerCase === true) {
-    fuction (gettingRandomChar[lowerCase])
+else if(confirmLowerCase === true) {
+    function gettingRandomChar(lowerCase)
 };
+
+    //running loop to check if all variables are false. If so, user is prompted to select again
+   if (confirmLowerCase == false && confirmUpperCase == false && confrimNumbers== false && confirmSpecialChar == false) {
+        alert("Please select one type of character");
+        confirmLowerCase=confirm("Do you want to include lowercase characters?");
+        confirmUpperCase=confirm("Do you want to include uppercase characters?");
+        confrimNumbers=confirm("Do you want to include numeric characters?");
+        confirmSpecialChar=confirm("Do you want to include special characters?");
+    }
