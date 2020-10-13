@@ -57,20 +57,15 @@ function gettingRandomChar(array) {
     //grab random index from selected array
     var randomIndex = Math.floor(Math.random() * array.length);
     var randomChar = array[randomIndex];
+  
 
     return randomChar;
     
 };
 
-// Write password to the #password input
-
-
-
-// Add event listener to generate button
+//function to generate password based on conditional statements regarding password choice 
 function usersPWOptions() {
     
-
-
 //generates confirm box which takes in true or false whether we want to use special characters in our password that we generate
 var confirmSpecialChar = confirm("Do you want to use special characters in your password?");
 //generates confirm box which takes in true or false whether we want to use numbers in our password
@@ -93,16 +88,10 @@ var userInput ={
     confirmUpperCase: confirmUpperCase,
     confirmLowerCase: confirmLowerCase,
 
-
-
-
-
 }
 return userInput;
 }
 
-//If-else conditional statements for boleon statement prompts
-//if the boleon statement on confirmSpecialChar is truthy, run the following funtion/method
 //func to generate password based on the users choices
 function createPassword() {
     var userOptions = usersPWOptions();
@@ -115,7 +104,7 @@ var characterChoice = [];
 // Array to contain one of each type of chosen character to make sure each will be used
 var charactersToBeUsed = [];    
 
-//Booleon statement to confirm user wants to use special characters in the password
+//if the boleon statement on confirmSpecialChar is truthy, run the following funtion/method
 if(userOptions.confirmSpecialChar === true) {
  characterChoice=characterChoice.concat(specialChars);
     charactersToBeUsed.push(gettingRandomChar(specialChars));
@@ -150,17 +139,8 @@ for (let index = 0; index < charactersToBeUsed.length; index++) {
 };
 return chosenPW.join('')
    
-
-
-//running loop to check if all variables are false. If so, user is prompted to select again
-     if (confirmLowerCase == false && confirmUpperCase == false && confirmNumbers== false && confirmSpecialChar == false) {
-        alert("Please select one type of character");
-        confirmLowerCase=confirm("Do you want to include lowercase characters?");
-        confirmUpperCase=confirm("Do you want to include uppercase characters?");
-        confirmNumbers=confirm("Do you want to include numeric characters?");
-        confirmSpecialChar=confirm("Do you want to include special characters?");
-    }
 }
+//Function to generate wirte password parameter
 function writePassword() {
     var password = createPassword();
     var passwordText = document.querySelector("#password");
@@ -169,4 +149,5 @@ function writePassword() {
 
 
 };
+// Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
