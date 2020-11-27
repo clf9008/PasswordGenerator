@@ -6,7 +6,7 @@ Password generator for javascript
 
 Inside this repository, you will find an index.html, styles.css, script.js, and a README.md. A link for the project can be found below:
 
-![alt text](/ "Password Generator")
+![](https://raw.githubusercontent.com/clf9008/PasswordGenerator/main/Screenshot%20(30).png "Password Generator")
 
 <https://clf9008.github.io/PasswordGenerator/>
 

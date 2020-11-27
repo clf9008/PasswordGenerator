@@ -76,6 +76,7 @@
     var confirmLowerCase = confirm("Do you want to use lowercase letters in your password?");
     //genereates a prompt box which ask the user how many charachters long they would like the password
     var confirmStrlength = prompt("Enter a password length of 8 to 128?")
+
     console.log(confirmSpecialChar);
     console.log(confirmNumbers);
     console.log(confirmUpperCase);
@@ -114,6 +115,7 @@
     if(userOptions.confirmNumbers === true) {
         characterChoice=characterChoice.concat(numbers);
         charactersToBeUsed.push(gettingRandomChar(numbers))
+        else alert("Please Enter A ")
     };
     console.log(charactersToBeUsed)
     //if the boleon statement on confirmUpperCase is truthy, run the following function/method
